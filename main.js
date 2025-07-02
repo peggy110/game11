@@ -113,10 +113,20 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') movePlayer(1, 0);
 });
 
-// 初始化第一關
-level = 1;
-ROWS = adjustOdd(10);
-COLS = adjustOdd(10);
-wallRate = 0.2;
-generateMaze();
-drawMaze();
+// 等待載入完成再綁定事件
+window.onload = function() {
+    const startLink = document.getElementById('startLink');
+    const canvas = document.getElementById('mazeCanvas');
+    startLink.onclick = function(e) {
+        e.preventDefault();
+        startLink.style.display = 'none';
+        canvas.style.display = '';
+        message.textContent = '';
+        level = 1;
+        ROWS = adjustOdd(10);
+        COLS = adjustOdd(10);
+        wallRate = 0.2;
+        generateMaze();
+        drawMaze();
+    };
+};
