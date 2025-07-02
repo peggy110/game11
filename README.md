@@ -7,7 +7,7 @@
 
 ## 遊玩方式
 1. 下載或 clone 此專案。
-2. 直接用瀏覽器打開 [`index.html`](index.html) 開始遊戲。
+2. 直接用瀏覽器打開 [`index.html`](https://peggy110.github.io/game11/) 開始遊戲。
 3. 用鍵盤方向鍵移動小津琳。
 
 ## 推薦功能
